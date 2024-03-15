@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "win-form", "TPFinalNivel2_Guzman\win-form.csproj", "{A6FF6DED-5E0A-400F-8A3C-61844187DC06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "Dominio\dominio.csproj", "{231EAD57-8F82-4D74-8929-FD4580A991BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{3FFECF7F-793D-4B2A-BD45-CD320178B415}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6FF6DED-5E0A-400F-8A3C-61844187DC06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6FF6DED-5E0A-400F-8A3C-61844187DC06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6FF6DED-5E0A-400F-8A3C-61844187DC06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6FF6DED-5E0A-400F-8A3C-61844187DC06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231EAD57-8F82-4D74-8929-FD4580A991BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231EAD57-8F82-4D74-8929-FD4580A991BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231EAD57-8F82-4D74-8929-FD4580A991BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231EAD57-8F82-4D74-8929-FD4580A991BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FFECF7F-793D-4B2A-BD45-CD320178B415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFECF7F-793D-4B2A-BD45-CD320178B415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFECF7F-793D-4B2A-BD45-CD320178B415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFECF7F-793D-4B2A-BD45-CD320178B415}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC9E5433-5FCF-44E3-B1A6-19B43A2C9EB2}
+	EndGlobalSection
+EndGlobal
