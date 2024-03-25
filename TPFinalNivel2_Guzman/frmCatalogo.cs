@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Negocio;
 using Dominio;
 using Negocio.Utilidades;
+using static System.Windows.Forms.Design.AxImporter;
 
 
 namespace TPFinalNivel2_Guzman
@@ -27,6 +28,11 @@ namespace TPFinalNivel2_Guzman
         private void CATALOGO_Load(object sender, EventArgs e)
         {
             cargar();
+            cbbCampo.Items.Add("Precio");
+            cbbCampo.Items.Add("Nombre");
+            cbbCampo.Items.Add("Descripcion");
+
+
         }
 
         private void cargar()
@@ -197,7 +203,173 @@ namespace TPFinalNivel2_Guzman
             }
         }
 
-       
+        private void txtfiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listafiltrada;
+            string filtro = txtfiltro.Text;
 
+
+            if (filtro.Length >= 3)
+            {
+                listafiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.Codigo.ToUpper().Contains(filtro.ToUpper()));
+
+            }
+
+            else
+            {
+                listafiltrada = listaArticulos;
+            }
+
+            dgvArticulos.DataSource = null;
+
+            dgvArticulos.DataSource = listafiltrada;
+            OcultarColumnas();
+        }
+
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             if (panelFiltro.Visible == false)
+            {
+                panelFiltro.Visible = true;
+            }
+             else
+            {
+                panelFiltro.Visible = false;
+            }
+        }
+
+
+        private bool validarFiltro()
+        {
+            bool filtroInvalido = false;
+
+            // Verificar si se ha seleccionado un campo para filtrar
+            if (cbbCampo.SelectedIndex < 0)
+            {
+                Validator.MostrarMensajeError(cbbCampo, "Por favor, seleccione el campo para filtrar.");
+                filtroInvalido = true;
+            }
+            else
+            {
+                Validator.OcultarMensajeError(cbbCampo);
+                // Verificar si se ha seleccionado un criterio
+                if (cbbCriterio.SelectedIndex < 0)
+                {
+                    Validator.MostrarMensajeError(cbbCriterio, "Por favor, seleccione un criterio");
+                    filtroInvalido = true;
+                }
+                else
+                {
+                    // Verificar si el campo de filtro está vacío cuando no se selecciona "Precio"
+                    if (cbbCampo.SelectedItem?.ToString() != "Precio" && string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+                    {
+                        Validator.MostrarMensajeError(txtFiltroAvanzado, "Debes cargar el filtro");
+                        filtroInvalido = true;
+                    }
+                    else
+                    {
+                        Validator.OcultarMensajeError(txtFiltroAvanzado);
+
+                        // Si el campo seleccionado es "Precio", validar el filtro
+                        if (cbbCampo.SelectedItem?.ToString() == "Precio")
+                        {
+                            // Verificar si se ha ingresado un valor para el filtro
+                            if (string.IsNullOrEmpty(txtFiltroAvanzado.Text))
+                            {
+                                Validator.MostrarMensajeError(txtFiltroAvanzado, "Debes cargar el filtro");
+                                filtroInvalido = true;
+                            }
+                            // Verificar si el valor ingresado es un número
+                            else if (!(Validator.soloNumeros(txtFiltroAvanzado.Text)))
+                            {
+                                Validator.MostrarMensajeError(txtFiltroAvanzado, "Ingresa un valor numérico");
+                                filtroInvalido = true;
+                            }
+                            else
+                            {
+                                Validator.OcultarMensajeError(txtFiltroAvanzado);
+                            }
+                        }
+                    }
+
+                    Validator.OcultarMensajeError(cbbCriterio);
+                }
+            }
+
+            return filtroInvalido;
+        }
+
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ArticulosNegocio negocio = new ArticulosNegocio();
+
+            try
+            {
+                if (validarFiltro())
+                {
+                    return;
+                }
+
+                string campo = cbbCampo.SelectedItem.ToString();
+                string criterio = cbbCriterio.SelectedItem.ToString();
+                string filtro = txtFiltroAvanzado.Text;
+                dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+
+        private void cbbCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+            string opcion = cbbCampo.SelectedItem.ToString();
+
+            try
+            {
+
+              
+                if (opcion == "Precio")
+                {
+                    cbbCriterio.Items.Clear();
+                    cbbCriterio.Items.Add("Mayor a");
+                    cbbCriterio.Items.Add("Menor a");
+                    cbbCriterio.Items.Add("Igual a");
+                }
+                else
+                {
+                    cbbCriterio.Items.Clear();
+                    cbbCriterio.Items.Add("Comienza con");
+                    cbbCriterio.Items.Add("Termina con");
+                    cbbCriterio.Items.Add("Contiene");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+          
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+
+
+            
+            dgvArticulos.DataSource = null; // Limpia el origen de datos del DataGridView
+            cargar();
+
+
+        }
     }
 }

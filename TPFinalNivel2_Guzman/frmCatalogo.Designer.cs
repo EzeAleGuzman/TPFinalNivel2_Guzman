@@ -39,14 +39,31 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.txtfiltro = new System.Windows.Forms.TextBox();
+            this.panelFiltro = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
+            this.cbbCriterio = new System.Windows.Forms.ComboBox();
+            this.cbbCampo = new System.Windows.Forms.ComboBox();
+            this.lblFiltroAvanzado = new System.Windows.Forms.Label();
+            this.lblCriterio = new System.Windows.Forms.Label();
+            this.lblCampo = new System.Windows.Forms.Label();
+            this.btnFiltroAvanzado = new System.Windows.Forms.Button();
+            this.btnReiniciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenUrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            this.panelFiltro.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(165, 448);
+            this.btnAgregarArticulo.BackColor = System.Drawing.Color.Gray;
+            this.btnAgregarArticulo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnAgregarArticulo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnAgregarArticulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarArticulo.Font = new System.Drawing.Font("Segoe UI Symbol", 11F);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(139, 417);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(110, 50);
             this.btnAgregarArticulo.TabIndex = 1;
@@ -56,8 +73,12 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnModificar.Location = new System.Drawing.Point(281, 448);
+            this.btnModificar.BackColor = System.Drawing.Color.Gray;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI Symbol", 11F);
+            this.btnModificar.Location = new System.Drawing.Point(255, 417);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(110, 50);
             this.btnModificar.TabIndex = 2;
@@ -78,8 +99,12 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnEliminar.Location = new System.Drawing.Point(397, 448);
+            this.btnEliminar.BackColor = System.Drawing.Color.Gray;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI Symbol", 11F);
+            this.btnEliminar.Location = new System.Drawing.Point(371, 417);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(110, 50);
             this.btnEliminar.TabIndex = 4;
@@ -89,8 +114,13 @@
             // 
             // btnDetalles
             // 
-            this.btnDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnDetalles.Location = new System.Drawing.Point(49, 448);
+            this.btnDetalles.BackColor = System.Drawing.Color.Gray;
+            this.btnDetalles.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.btnDetalles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalles.Font = new System.Drawing.Font("Segoe UI Symbol", 11F);
+            this.btnDetalles.Location = new System.Drawing.Point(23, 417);
+            this.btnDetalles.Margin = new System.Windows.Forms.Padding(0);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(110, 50);
             this.btnDetalles.TabIndex = 5;
@@ -119,11 +149,11 @@
             this.dgvArticulos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dgvArticulos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 18F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -137,7 +167,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvArticulos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvArticulos.EnableHeadersVisualStyles = false;
-            this.dgvArticulos.Location = new System.Drawing.Point(6, 79);
+            this.dgvArticulos.Location = new System.Drawing.Point(6, 105);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
@@ -163,12 +193,147 @@
             this.dgvArticulos.TabIndex = 6;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            this.lblBuscar.Location = new System.Drawing.Point(19, 79);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(99, 21);
+            this.lblBuscar.TabIndex = 7;
+            this.lblBuscar.Text = "Filtro Rápido";
+            // 
+            // txtfiltro
+            // 
+            this.txtfiltro.Location = new System.Drawing.Point(135, 79);
+            this.txtfiltro.Name = "txtfiltro";
+            this.txtfiltro.Size = new System.Drawing.Size(189, 20);
+            this.txtfiltro.TabIndex = 8;
+            this.txtfiltro.TextChanged += new System.EventHandler(this.txtfiltro_TextChanged);
+            // 
+            // panelFiltro
+            // 
+            this.panelFiltro.Controls.Add(this.btnReiniciar);
+            this.panelFiltro.Controls.Add(this.btnBuscar);
+            this.panelFiltro.Controls.Add(this.txtFiltroAvanzado);
+            this.panelFiltro.Controls.Add(this.cbbCriterio);
+            this.panelFiltro.Controls.Add(this.cbbCampo);
+            this.panelFiltro.Controls.Add(this.lblFiltroAvanzado);
+            this.panelFiltro.Controls.Add(this.lblCriterio);
+            this.panelFiltro.Controls.Add(this.lblCampo);
+            this.panelFiltro.Location = new System.Drawing.Point(23, 501);
+            this.panelFiltro.Name = "panelFiltro";
+            this.panelFiltro.Size = new System.Drawing.Size(969, 60);
+            this.panelFiltro.TabIndex = 9;
+            this.panelFiltro.Visible = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Gray;
+            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(768, 14);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 23;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtFiltroAvanzado
+            // 
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(583, 15);
+            this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
+            this.txtFiltroAvanzado.Size = new System.Drawing.Size(167, 20);
+            this.txtFiltroAvanzado.TabIndex = 22;
+            // 
+            // cbbCriterio
+            // 
+            this.cbbCriterio.FormattingEnabled = true;
+            this.cbbCriterio.Location = new System.Drawing.Point(353, 15);
+            this.cbbCriterio.Name = "cbbCriterio";
+            this.cbbCriterio.Size = new System.Drawing.Size(154, 21);
+            this.cbbCriterio.TabIndex = 21;
+            // 
+            // cbbCampo
+            // 
+            this.cbbCampo.FormattingEnabled = true;
+            this.cbbCampo.Location = new System.Drawing.Point(109, 15);
+            this.cbbCampo.Name = "cbbCampo";
+            this.cbbCampo.Size = new System.Drawing.Size(154, 21);
+            this.cbbCampo.TabIndex = 20;
+            this.cbbCampo.SelectedIndexChanged += new System.EventHandler(this.cbbCampo_SelectedIndexChanged);
+            // 
+            // lblFiltroAvanzado
+            // 
+            this.lblFiltroAvanzado.AutoSize = true;
+            this.lblFiltroAvanzado.Font = new System.Drawing.Font("Segoe UI Symbol", 10F);
+            this.lblFiltroAvanzado.Location = new System.Drawing.Point(525, 16);
+            this.lblFiltroAvanzado.Name = "lblFiltroAvanzado";
+            this.lblFiltroAvanzado.Size = new System.Drawing.Size(40, 19);
+            this.lblFiltroAvanzado.TabIndex = 19;
+            this.lblFiltroAvanzado.Text = "Filtro";
+            // 
+            // lblCriterio
+            // 
+            this.lblCriterio.AutoSize = true;
+            this.lblCriterio.Font = new System.Drawing.Font("Segoe UI Symbol", 10F);
+            this.lblCriterio.Location = new System.Drawing.Point(281, 16);
+            this.lblCriterio.Name = "lblCriterio";
+            this.lblCriterio.Size = new System.Drawing.Size(54, 19);
+            this.lblCriterio.TabIndex = 18;
+            this.lblCriterio.Text = "Criterio";
+            // 
+            // lblCampo
+            // 
+            this.lblCampo.AutoSize = true;
+            this.lblCampo.Font = new System.Drawing.Font("Segoe UI Symbol", 10F);
+            this.lblCampo.Location = new System.Drawing.Point(38, 16);
+            this.lblCampo.Name = "lblCampo";
+            this.lblCampo.Size = new System.Drawing.Size(53, 19);
+            this.lblCampo.TabIndex = 17;
+            this.lblCampo.Text = "Campo";
+            // 
+            // btnFiltroAvanzado
+            // 
+            this.btnFiltroAvanzado.BackColor = System.Drawing.Color.Gray;
+            this.btnFiltroAvanzado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Fuchsia;
+            this.btnFiltroAvanzado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Fuchsia;
+            this.btnFiltroAvanzado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroAvanzado.Font = new System.Drawing.Font("Segoe UI Symbol", 10F);
+            this.btnFiltroAvanzado.Location = new System.Drawing.Point(829, 468);
+            this.btnFiltroAvanzado.Name = "btnFiltroAvanzado";
+            this.btnFiltroAvanzado.Size = new System.Drawing.Size(139, 27);
+            this.btnFiltroAvanzado.TabIndex = 10;
+            this.btnFiltroAvanzado.Text = "Filtro Avanzado";
+            this.btnFiltroAvanzado.UseVisualStyleBackColor = false;
+            this.btnFiltroAvanzado.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnReiniciar
+            // 
+            this.btnReiniciar.BackColor = System.Drawing.Color.Gray;
+            this.btnReiniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.btnReiniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnReiniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReiniciar.Location = new System.Drawing.Point(870, 14);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnReiniciar.TabIndex = 24;
+            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.UseVisualStyleBackColor = false;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            // 
             // Catalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1074, 582);
+            this.Controls.Add(this.btnFiltroAvanzado);
+            this.Controls.Add(this.panelFiltro);
+            this.Controls.Add(this.txtfiltro);
+            this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnDetalles);
             this.Controls.Add(this.btnEliminar);
@@ -186,7 +351,10 @@
             this.Load += new System.EventHandler(this.CATALOGO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenUrl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            this.panelFiltro.ResumeLayout(false);
+            this.panelFiltro.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -197,6 +365,18 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalles;
         private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.TextBox txtfiltro;
+        private System.Windows.Forms.Panel panelFiltro;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtFiltroAvanzado;
+        private System.Windows.Forms.ComboBox cbbCriterio;
+        private System.Windows.Forms.ComboBox cbbCampo;
+        private System.Windows.Forms.Label lblFiltroAvanzado;
+        private System.Windows.Forms.Label lblCriterio;
+        private System.Windows.Forms.Label lblCampo;
+        private System.Windows.Forms.Button btnFiltroAvanzado;
+        private System.Windows.Forms.Button btnReiniciar;
     }
 }
 

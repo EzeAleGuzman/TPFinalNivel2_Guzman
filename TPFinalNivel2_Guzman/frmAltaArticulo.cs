@@ -15,7 +15,7 @@ using MaterialSkin.Controls;
 
 namespace TPFinalNivel2_Guzman
 {
-    public partial class frmAltaArticulo : MaterialForm 
+    public partial class frmAltaArticulo : Form 
     {
         Articulo articulo = null;
         public frmAltaArticulo()
@@ -36,7 +36,8 @@ namespace TPFinalNivel2_Guzman
         {
             MarcaNegocio Marca = new MarcaNegocio();
             CategoriaNegocio Categoria = new CategoriaNegocio();
-            
+            this.BackColor = System.Drawing.Color.FromArgb(255, 255, 192);
+
 
             try
             {
@@ -51,7 +52,7 @@ namespace TPFinalNivel2_Guzman
                    cbbCategoria.ValueMember = "Id";
                    cbbCategoria.DisplayMember = "Descripcion";
 
-               
+
 
                 if (articulo != null)
                 {
@@ -116,9 +117,6 @@ namespace TPFinalNivel2_Guzman
 
                 ArticulosNegocio negocio = new ArticulosNegocio();
 
-
-                Articulo articulo = new Articulo();
-
                 if (articulo == null)
                 {
                     articulo = new Articulo();
@@ -131,6 +129,7 @@ namespace TPFinalNivel2_Guzman
                 articulo.Categoria = (Categoria)cbbCategoria.SelectedItem;
                 decimal precio = Convert.ToDecimal(txtPrecio.Text);
                 articulo.Precio = precio;
+                
                 
                 
 
@@ -234,6 +233,7 @@ namespace TPFinalNivel2_Guzman
 
             return true;
         }
-       
+
+    
     }
 }

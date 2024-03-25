@@ -50,8 +50,19 @@ namespace Negocio.Utilidades
             }
         }
 
+        public static bool soloNumeros(string cadena)
+        {
+            foreach (char c in cadena)
+            {
+                if (!(char.IsNumber(c)))
+                {
+                    return false;
+                }
 
-       
+            }
+            return true;
+        }
+
 
 
 

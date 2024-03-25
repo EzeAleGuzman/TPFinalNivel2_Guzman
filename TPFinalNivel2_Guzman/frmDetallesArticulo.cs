@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace TPFinalNivel2_Guzman
 {
     public partial class frmDetallesArticulo : Form
@@ -22,7 +23,9 @@ namespace TPFinalNivel2_Guzman
         public frmDetallesArticulo(Articulo articulo)
         {
             InitializeComponent();
-            this.articulo = articulo; 
+            this.articulo = articulo;
+
+           
 
         }
 
@@ -58,7 +61,6 @@ namespace TPFinalNivel2_Guzman
                         labelCodigo.Text = articulo.Codigo;
                         labelNombre.Text = articulo.Nombre;
                         labelDescripcion.Text = articulo.Descripcion;
-                        labelUrlImagen.Text = articulo.ImagenUrl;
                         cargarImagen(articulo.ImagenUrl);
                         cbbmarca.SelectedValue = articulo.IdMarca;
                         cbbcategoria.SelectedValue = articulo.IdCategoria;
@@ -108,6 +110,7 @@ namespace TPFinalNivel2_Guzman
             this.Close();
         }
 
+    
     }
 
 }

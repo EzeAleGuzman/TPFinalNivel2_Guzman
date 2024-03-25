@@ -115,6 +115,25 @@ namespace TPFinalNivel2_Guzman
             btnInicio_Click(null, e);
         }
 
-        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new Construiccion());
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new Construiccion());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new Construiccion());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new Construiccion());
+        }
     }
 }
