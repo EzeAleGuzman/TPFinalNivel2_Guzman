@@ -45,6 +45,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             lblUrlImagen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             lblUrlImagen.Size = new System.Drawing.Size(87, 21);
             lblUrlImagen.TabIndex = 9;
             lblUrlImagen.Text = "Url Imagen";
+            this.txtUrlImagen.Leave += new System.EventHandler(this.txtUrlImagen_Leave);
             // 
             // txtDescripcion
             // 
@@ -239,6 +241,20 @@
             this.txtCodigo.Size = new System.Drawing.Size(180, 26);
             this.txtCodigo.TabIndex = 21;
             // 
+            // btnAgregarImagen
+            // 
+            this.btnAgregarImagen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.btnAgregarImagen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAgregarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarImagen.Font = new System.Drawing.Font("Segoe UI Symbol", 12F);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(324, 240);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(35, 32);
+            this.btnAgregarImagen.TabIndex = 22;
+            this.btnAgregarImagen.Text = "+";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
+            // 
             // frmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +264,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(794, 592);
             this.ControlBox = false;
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnAceptar);
@@ -296,5 +313,6 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Button btnAgregarImagen;
     }
 }

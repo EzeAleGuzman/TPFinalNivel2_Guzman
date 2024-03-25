@@ -12,12 +12,16 @@ using Negocio;
 using System.Xml.Linq;
 using Negocio.Utilidades;
 using MaterialSkin.Controls;
+using System.IO;
+using System.Configuration;
 
 namespace TPFinalNivel2_Guzman
 {
     public partial class frmAltaArticulo : Form 
     {
-        Articulo articulo = null;
+        private Articulo articulo = null;
+        private OpenFileDialog archivo = null;
+
         public frmAltaArticulo()
         {
             InitializeComponent();
@@ -145,6 +149,11 @@ namespace TPFinalNivel2_Guzman
                     MessageBox.Show("Agregado Exitosamente");
                 }
 
+                if (archivo != null && !(txtUrlImagen.Text.ToUpper().Contains("HTTP")))
+                {
+                    File.Copy(archivo.FileName, ConfigurationManager.AppSettings["Catalogo-APP"] + archivo.SafeFileName);
+                }
+
                 Close();
             }
             catch (Exception ex)
@@ -155,6 +164,10 @@ namespace TPFinalNivel2_Guzman
            
         }
 
+        private void txtUrlImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtUrlImagen.Text);
+        }
 
         //la funcion general que realiza las validaciones
         private  bool ValidarCampos()
@@ -234,6 +247,17 @@ namespace TPFinalNivel2_Guzman
             return true;
         }
 
-    
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg |*.jpg;|png |*.png";
+           if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtUrlImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+               
+            }
+        }
     }
 }
