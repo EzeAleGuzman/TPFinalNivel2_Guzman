@@ -72,6 +72,9 @@
             // 
             // cbbmarca
             // 
+            this.cbbmarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbmarca.Enabled = false;
+            this.cbbmarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbmarca.Font = new System.Drawing.Font("Segoe UI Symbol", 10F);
             this.cbbmarca.FormattingEnabled = true;
             this.cbbmarca.Location = new System.Drawing.Point(223, 469);
@@ -81,6 +84,9 @@
             // 
             // cbbcategoria
             // 
+            this.cbbcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbcategoria.Enabled = false;
+            this.cbbcategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbcategoria.Font = new System.Drawing.Font("Segoe UI Symbol", 10F);
             this.cbbcategoria.FormattingEnabled = true;
             this.cbbcategoria.Location = new System.Drawing.Point(223, 434);
