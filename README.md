@@ -1,7 +1,6 @@
-# Nombre del Proyecto
+# [MAXY CATÁLOGO]
 
-[MAXY CATÁLOGO]
-
+[![logo.png](https://i.postimg.cc/YqMqJt1D/logo.png)](https://postimg.cc/G9gCDwgv)
 ## Descripción
 
 Este proyecto fue desarrollado como parte de mi curso de C# para demostrar mis habilidades en el lenguaje de programación C# utilizando .NET y Windows Forms. Consiste en Un Catalogo multiproposito, el cual no solo cumple las funciones de un CRUD,
@@ -19,8 +18,7 @@ sino que tambien cuenta con distintas instancias de validaciones y versionado.
 
 ## Uso
 
-[![Demostración del Proyecto](recursos/WhatsApp Image 2024-03-25 at 9.45.24 PM.jpeg)](https://www.youtube.com/watch?v=5eBuBTamz0U)
-
+[![Whats-App-Image-2024-03-25-at-9-45-24-PM.jpg](https://i.postimg.cc/65XytrN0/Whats-App-Image-2024-03-25-at-9-45-24-PM.jpg)](https://postimg.cc/yWLVTSxg)
 El enlace al video demostrativo está disponible [aquí](https://www.youtube.com/watch?v=5eBuBTamz0U).
 
 ## Contribución
