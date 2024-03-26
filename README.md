@@ -5,7 +5,7 @@
 
 Este proyecto fue desarrollado como parte de mi curso de C# para demostrar mis habilidades en el lenguaje de programación C# utilizando .NET y Windows Forms. Consiste en Un Catalogo multiproposito, el cual no solo cumple las funciones de un CRUD,
 sino que tambien cuenta con distintas instancias de validaciones y versionado. Tambien vimos la utilizacion de filtros tanto Rapido como Filtros mas avanzados. La posibilidad de almacenar imagenes de manera local o traerlas mediante una URL.
-Este proyecto fue realizado con la funcion de Capas de desarrollo y con el concepto de POO.
+Este proyecto fue realizado con la Arquitectura de Capas  y con el concepto de POO.
 
 ## Tecnologías Utilizadas
 
