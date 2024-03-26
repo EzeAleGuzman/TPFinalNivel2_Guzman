@@ -19,8 +19,9 @@ sino que tambien cuenta con distintas instancias de validaciones y versionado.
 
 ## Uso
 
-[![Demostración del Proyecto](https://drive.google.com/file/d/1R8wEpRrr2IIH-twit-YTOh9ZiJDcz6ck/view?usp=sharing))](https://www.youtube.com/watch?v=5eBuBTamz0U))
+[![Demostración del Proyecto](recursos/WhatsApp Image 2024-03-25 at 9.45.24 PM.jpeg)](https://www.youtube.com/watch?v=5eBuBTamz0U)
 
+El enlace al video demostrativo está disponible [aquí](https://www.youtube.com/watch?v=5eBuBTamz0U).
 
 ## Contribución
 
